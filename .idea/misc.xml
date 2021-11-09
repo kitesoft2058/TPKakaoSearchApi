@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android/Projects/TPKakaoSearchApi/app/src/main/res/drawable/bg_choice.xml" value="0.3717948717948718" />
+        <entry key="..\:/Android/Projects/TPKakaoSearchApi/app/src/main/res/drawable/bg_search_et.xml" value="0.3717948717948718" />
+        <entry key="..\:/Android/Projects/TPKakaoSearchApi/app/src/main/res/layout/activity_main.xml" value="0.3614583333333333" />
+        <entry key="..\:/Android/Projects/TPKakaoSearchApi/app/src/main/res/layout/choice_list.xml" value="0.3614583333333333" />
+        <entry key="..\:/Android/Projects/TPKakaoSearchApi/app/src/main/res/menu/actionbar_main.xml" value="0.3614583333333333" />
         <entry key="app/src/main/res/drawable/bg_choice.xml" value="0.22962962962962963" />
         <entry key="app/src/main/res/drawable/bg_choice_select.xml" value="0.22962962962962963" />
         <entry key="app/src/main/res/drawable/bg_search_et.xml" value="0.26461538461538464" />
@@ -14,7 +19,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
