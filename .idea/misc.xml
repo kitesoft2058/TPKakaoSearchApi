@@ -13,6 +13,7 @@
         <entry key="app/src/main/res/drawable/bg_distance.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/bg_search_et.xml" value="0.26461538461538464" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18888888888888888" />
+        <entry key="app/src/main/res/layout/activity_place_url.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/choice_list.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.18888888888888888" />
         <entry key="app/src/main/res/layout/fragment_map.xml" value="0.2526041666666667" />

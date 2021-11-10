@@ -11,8 +11,11 @@ import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -43,12 +46,15 @@ public class MainActivity extends AppCompatActivity {
     //2. 현재 내위치 정보 객체 (위도,경도 정보를 멤버로 보유)
     Location mylocation= null;
 
-
     //[ Google Fused Location API 사용 :  play-services-location ]
     FusedLocationProviderClient providerClient;
 
     //Kakao search API response object reference
     public SearchLocalApiResponse searchLocalApiResponse;
+
+    TabLayout tabLayout;
+
+    EditText etSearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().add(R.id.container, new ListFragment()).commit();
 
-        TabLayout tabLayout = findViewById(R.id.layout_tab);
+        tabLayout = findViewById(R.id.layout_tab);
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
@@ -80,6 +86,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
 
+            }
+        });
+
+        etSearch= findViewById(R.id.et_search);
+        //소프트키보드의 검색버튼 클릭하였을때.
+        etSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            @Override
+            public boolean onEditorAction(TextView textView, int i, KeyEvent keyEvent) {
+                searchQuery= etSearch.getText().toString();
+                searchPlace();
+                return false;
             }
         });
 
@@ -161,6 +178,9 @@ public class MainActivity extends AppCompatActivity {
                 //무조건 먼저 ListFragment 로 보여주기 - 응답받은 결과 객체 전달해주기.
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, new ListFragment()).commit();
 
+                //탭버튼의 위치를 ListFragment Tab 으로 변경
+                tabLayout.getTabAt(0).select();
+
             }
 
             @Override
@@ -168,21 +188,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "서버 오류가 있습니다.\n잠시뒤에 다시 시도해 주시기 바랍니다.", Toast.LENGTH_SHORT).show();
             }
         });
-//        call.enqueue(new Callback<String>() {
-//            @Override
-//            public void onResponse(Call<String> call, Response<String> response) {
-//                String s= response.body();
-//                new AlertDialog.Builder(MainActivity.this).setMessage(s).show();
-//
-//                //모든 검색이 끝났으니 내 위치 정보 업데이트는 이제 종료
-//                providerClient.removeLocationUpdates(locationCallback);
-//            }
-//
-//            @Override
-//            public void onFailure(Call<String> call, Throwable t) {
-//                Toast.makeText(MainActivity.this, "서버 오류가 있습니다.\n잠시뒤에 다시 시도해 주시기 바랍니다.", Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
     }
 
@@ -199,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
         view.setBackgroundResource(R.drawable.bg_choice_select);
         choiceID= view.getId();
 
-        //초이스한 것에 따라 검색장로를 변경하여 다시 장소요청
+        //초이스한 것에 따라 검색장소를 변경하여 다시 장소요청
         switch (choiceID){
             case R.id.choice_wc: searchQuery="화장실"; break;
             case R.id.choice_movie: searchQuery="영화관"; break;
@@ -214,5 +219,9 @@ public class MainActivity extends AppCompatActivity {
         }
         //새로운 검색 요청.
         searchPlace();
+
+        //검색창에 글씨가 있다면 지우기..
+        etSearch.setText("");
+        etSearch.clearFocus(); //이전 포커스로 인해 커서가 남아있어서 포커스 없애기
     }
 }

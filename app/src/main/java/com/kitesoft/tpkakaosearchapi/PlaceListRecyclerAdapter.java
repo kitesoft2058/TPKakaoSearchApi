@@ -1,6 +1,7 @@
 package com.kitesoft.tpkakaosearchapi;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,6 +59,17 @@ public class PlaceListRecyclerAdapter extends RecyclerView.Adapter {
             tvPlaceName= itemView.findViewById(R.id.tv_place_name);
             tvAdderss= itemView.findViewById(R.id.tv_address);
             tvDistance= itemView.findViewById(R.id.tv_distance);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Place place= places.get(getAdapterPosition());
+
+                    Intent intent= new Intent(context, PlaceUrlActivity.class);
+                    intent.putExtra("place_url", place.place_url);
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }
