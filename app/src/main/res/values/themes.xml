@@ -13,4 +13,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!-- Splash 액티비티 스타일 테마   -->
+    <style name="SplashTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+<!--        <item name="android:windowBackground">@color/black</item>-->
+        <!--   색상과 그림을 동시에 보이려면 마치 포토샵의 여러층의 레이어를 겹쳐서 보여주는 작업이 필요함. drawable / <layer-list>    -->
+        <item name="android:windowBackground">@drawable/splash</item>
+        <!--  상태표시줄 안보이기.  -->
+        <item name="android:windowFullscreen">true</item>
+    </style>
 </resources>
