@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
+        android:name=".GlobalApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
@@ -15,11 +16,15 @@
         android:theme="@style/Theme.TPKakaoSearchApi"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
             android:name=".SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -28,8 +33,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"></activity>
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -37,6 +41,22 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCMsx0Q3FxIIA5KsdsbYVMugpQ3RvhYKjA" />
+
+
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
+                <data android:host="oauth"
+                    android:scheme="kakao1ba9b88628d74185a4de1c520fb90f20" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
