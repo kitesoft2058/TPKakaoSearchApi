@@ -14,11 +14,14 @@
         <entry key="app/src/main/res/drawable/bg_login_email.xml" value="0.16944444444444445" />
         <entry key="app/src/main/res/drawable/bg_search_et.xml" value="0.26461538461538464" />
         <entry key="app/src/main/res/drawable/bg_tv_go_login.xml" value="0.16944444444444445" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_back_24.xml" value="0.2490740740740741" />
         <entry key="app/src/main/res/drawable/splash.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/layout/activity_email_sign_in.xml" value="0.23854166666666668" />
         <entry key="app/src/main/res/layout/activity_fullscreen.xml" value="0.2640625" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18888888888888888" />
         <entry key="app/src/main/res/layout/activity_place_url.xml" value="0.23854166666666668" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/choice_list.xml" value="0.2526041666666667" />
         <entry key="app/src/main/res/layout/fragment_list.xml" value="0.18888888888888888" />
         <entry key="app/src/main/res/layout/fragment_map.xml" value="0.2526041666666667" />

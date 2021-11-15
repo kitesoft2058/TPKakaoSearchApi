@@ -16,6 +16,12 @@
         android:theme="@style/Theme.TPKakaoSearchApi"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".EmailSignInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="true" />
+        <activity
             android:name=".LoginActivity"
             android:exported="true" />
         <activity
@@ -33,7 +39,7 @@
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
 
         <meta-data
             android:name="com.google.android.gms.version"
@@ -42,21 +48,21 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCMsx0Q3FxIIA5KsdsbYVMugpQ3RvhYKjA" />
 
-
         <activity
             android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <!-- Redirect URI: "kakao{NATIVE_APP_KEY}://oauth" -->
-                <data android:host="oauth"
+                <data
+                    android:host="oauth"
                     android:scheme="kakao1ba9b88628d74185a4de1c520fb90f20" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

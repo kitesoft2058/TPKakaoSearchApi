@@ -50,10 +50,12 @@ public class LoginActivity extends AppCompatActivity {
 
     public void clickSignUp(View view) {
         //회원가입화면으로 전환
+        startActivity(new Intent(this, SignUpActivity.class));
     }
 
     public void clickLoginEmail(View view) {
         //이메일로 로그인 화면 전환
+        startActivity(new Intent(this, EmailSignInActivity.class));
     }
 
     public void clickLoginKakao(View view) {
