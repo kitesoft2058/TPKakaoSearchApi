@@ -12,7 +12,7 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"/>용
+        android:layout_height="?attr/actionBarSize"/>
 
     <ImageView
         android:layout_width="120dp"

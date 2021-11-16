@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "65234076304",
+    "project_id": "danggunjang",
+    "storage_bucket": "danggunjang.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:65234076304:android:1255bafb60f99d49ea8e15",
+        "android_client_info": {
+          "package_name": "com.kitesoft.tpkakaosearchapi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "65234076304-t66ikiadb29nopknp1f8oa47qejnvkr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEDGDqvzPiwrmHvkhVuXs4OWGp1532b10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "65234076304-t66ikiadb29nopknp1f8oa47qejnvkr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
